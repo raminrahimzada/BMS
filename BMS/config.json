@@ -1,0 +1,54 @@
+[
+  {
+    "Cron": "* * * * *",
+    "Name": "CLMS backup job",
+    "DatabaseName": "clmsclappdev",
+    "TempDirectory": "C:\\Users\\ramin\\AppData\\Local\\Temp\\",
+    "BackupProvider": {
+      "DbType": "MsSql",
+      "ConnectionString": "Data Source=MATRIX\\SERVER17;Initial Catalog=Laguna;User Id=sa;Password=123456"
+    },
+    "Storages": [
+      {
+        "Name": "Ftp Storage-Localhost",
+        "Host": "ftp://localhost",
+        "Port": 21,
+        "Username": "anonymous",
+        "Password": "",
+        "Directory": "CLMS",
+        "Type": "FTP"
+      },
+      {
+        "Name": "Local Storage -D Disk",        
+        "Directory": "D:\\CLMS",
+        "Type": "LocalDirectory"
+      }
+    ]
+  },
+  {
+    "Cron": "* * * * *",
+    "Name": "PRMS backup job",
+    "DatabaseName": "PRMS",
+    "TempDirectory": "C:\\Users\\ramin\\AppData\\Local\\Temp\\",
+    "BackupProvider": {
+      "DbType": "MsSql",
+      "ConnectionString": "Data Source=MATRIX\\SERVER17;Initial Catalog=Laguna;User Id=sa;Password=123456"
+    },
+    "Storages": [
+      {
+        "Name": "Ftp Storage-Localhost",
+        "Host": "ftp://localhost",
+        "Port": 21,
+        "Username": "anonymous",
+        "Password": "",
+        "Directory": "PRMS",
+        "Type": "FTP"
+      },
+      {
+        "Name": "Local Storage C Disk",
+        "Directory": "C:\\PRMS",
+        "Type": "LocalDirectory"
+      }
+    ]
+  }
+]
